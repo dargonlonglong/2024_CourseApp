@@ -41,5 +41,5 @@ void Student::display() const
 	Person::display();
 	cout << "學號: " << studentId << endl;
 	cout << "科系: " << Utility::tostring(department) << endl;
-	cout << "班級: " << static_cast<int>(className) << endl;
+	cout << "班級: " << Utility::tostring(className) << endl;
 }

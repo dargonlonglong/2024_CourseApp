@@ -20,6 +20,6 @@ int main()
     cout << endl;
     person2->display();
 
-    Student student1("A123456789", "Chen", "Jason", "M", "1999-01-01", "D123456789", Department::ComputerSciece, ClassName::_1A);
+    Student student1("A123456789", "Chen", "Jason", "M", "1999-01-01", "S001", Department::ComputerSciece, ClassName::_1A);
     student1.display();
 }
