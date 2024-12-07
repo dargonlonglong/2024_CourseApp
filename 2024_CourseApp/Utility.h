@@ -1,9 +1,10 @@
 #pragma once
+#include <string>
 using namespace std;
 
 enum class Department {
-	ComputerSceince,
-	ElectricalEnginnering,
+	ComputerSciece,
+	ElectricalEngineering,
 	ElectronicEngineering,
 	InformationManagement,
 };
@@ -17,4 +18,10 @@ enum class ClassName {
 	_3B,
 	_4A,
 	_4B,
+};
+
+class Utility {
+public:
+	static string tostring(Department department);
+	static string tostring(ClassName className);
 };
