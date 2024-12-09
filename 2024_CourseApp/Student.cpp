@@ -40,6 +40,6 @@ void Student::display() const
 {
 	Person::display();
 	cout << "學號: " << studentId << endl;
-	cout << "科系: " << Utility::tostring(department) << endl;
-	cout << "班級: " << Utility::tostring(className) << endl;
+	cout << "科系: " << Utility::toString(department) << endl;
+	cout << "班級: " << Utility::toString(className) << endl;
 }

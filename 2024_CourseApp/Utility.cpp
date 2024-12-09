@@ -1,7 +1,7 @@
 #include "Utility.h"
 #include <string>
 
-string Utility::tostring(Department department)
+string Utility::toString(Department department)
 {
 	switch (department) {
 	case Department::ComputerSciece:
@@ -17,7 +17,7 @@ string Utility::tostring(Department department)
 	}
 }
 
-string Utility::tostring(ClassName className)
+string Utility::toString(ClassName className)
 {
 	switch (className) {
 	case ClassName::_1A:

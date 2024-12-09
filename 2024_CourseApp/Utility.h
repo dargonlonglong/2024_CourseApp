@@ -22,6 +22,6 @@ enum class ClassName {
 
 class Utility {
 public:
-	static string tostring(Department department);
-	static string tostring(ClassName className);
+	static string toString(Department department);
+	static string toString(ClassName className);
 };
