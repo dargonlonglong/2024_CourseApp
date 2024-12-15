@@ -25,11 +25,15 @@ string Record::getCourseId() const
 
 string Record::getRecordDate() const
 {
-	char butter[20];
-	struct tm timeinfo;
-	localtime_s(&timeinfo, &recordDate);
-	strftime(butter, sizeof(butter), "%Y-%m-%-d", &timeinfo);
-	return string(butter);
+    char buffer[20];
+    struct tm timeinfo;
+    errno_t err = localtime_s(&timeinfo, &recordDate);
+    if (err != 0) {
+        // 處理錯誤，例如返回空字串或預設日期
+        return "";
+    }
+    strftime(buffer, sizeof(buffer), "%Y-%m-%d", &timeinfo);
+    return string(buffer);
 }
 
 void Record::display()
