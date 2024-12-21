@@ -8,6 +8,7 @@
 #include "Record.h"
 #include "Utility.h"
 #include "2024_CourseApp.h"
+
 using namespace std;
 
 //新增全域函數來儲存學生、老師、課程、選課紀錄的資料
@@ -15,6 +16,7 @@ vector<Student> students;
 vector<Teacher> teachers;
 vector<Course> courses;
 vector<Record> records;
+
 int main()
 {
     initializeData();
@@ -90,11 +92,13 @@ void initializeData()
 void displayMenu() {
     int choice;
     do {
+        system("cls");
         cout << "================" << endl;
         cout << "1. 列出學生資料" << endl;
         cout << "2. 列出課程資料" << endl;
         cout << "3. 列出教師資料" << endl;
         cout << "4. 列出選課紀錄" << endl;
+        cout << "5. 查詢學生資料" << endl;
         cout << "0. 退出" << endl;
         cout << "請選擇操作: ";
         cin >> choice;
@@ -103,18 +107,30 @@ void displayMenu() {
         case 1:
             cout << "列出學生資料" << endl;
             listStudents();
+            cout << "按任意鍵繼續...";
+            system("pause");
             break;
         case 2:
             cout << "列出課程資料" << endl;
             listCourses();
+            cout << "按任意鍵繼續...";
+            system("pause");
             break;
         case 3:
             cout << "列出教師資料" << endl;
             listTeachers();
+            cout << "按任意鍵繼續...";
+            system("pause");
             break;
         case 4:
             cout << "列出選課紀錄" << endl;
             listRecords();
+            cout << "按任意鍵繼續...";
+            system("pause");
+            break;
+        case 5:
+            cout << "查詢學生資料" << endl;
+            queryStudent();
             break;
         case 0:
             cout << "退出" << endl;
@@ -136,6 +152,7 @@ void listStudents()
     }
     cout << endl;
 }
+
 void listCourses()
 {
     cout << "課程資料總共有" << courses.size() << "筆" << endl;
@@ -167,4 +184,25 @@ void listRecords()
         cout << endl;
     }
     cout << endl;
+}
+
+void queryStudent()
+{
+    string studentId;
+    cout << "請輸入學號: ";
+    cin >> studentId;
+
+    bool found = false;
+    for (auto student : students) {
+        if (student.getStudentId() == studentId) {
+            student.display();
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        cout << "找不到學號為" << studentId << "的學生" << endl;
+    }
+    cout << "按任意鍵繼續...";
+    system("pause");
 }
