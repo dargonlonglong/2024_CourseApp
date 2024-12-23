@@ -268,6 +268,11 @@ void queryCourse()
             break;
         }
     }
+    if (!found) {
+        cout << "找不到課程編號為" << courseId << "的課程" << endl;
+    }
+    cout << "按任意鍵繼續...";
+    system("pause");
 }
 
 void queryTeacher()
@@ -284,6 +289,11 @@ void queryTeacher()
             break;
         }
     }
+    if (!found) {
+        cout << "找不到教師編號為" << teacherId << "的老師" << endl;
+    }
+    cout << "按任意鍵繼續...";
+    system("pause");
 }
 
 void queryRecord()
@@ -302,6 +312,11 @@ void queryRecord()
             break;
         }
     }
+    if (!found) {
+        cout << "找不到選課紀錄為" << courseId << "的課程" << endl;
+    }
+    cout << "按任意鍵繼續...";
+    system("pause");
 }
 
 void addStudent()
@@ -321,6 +336,7 @@ void addStudent()
     cin >> birthDate;
     cout << "學號: ";
     cin >> studentId;
+
 
     cout << "科系: " << endl;
     for (int i = 0; i < static_cast<int>(Department::Last); i++) {
