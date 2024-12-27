@@ -142,17 +142,17 @@ void displayMenu() {
             break;
         case 6:
             cout << "查詢課程資料" << endl;
-            queryCourse();
+            //queryCourse();
             system("pause");
             break;
         case 7:
             cout << "查詢教師資料" << endl;
-            queryTeacher();
+            //queryTeacher();
             system("pause");
             break;
         case 8:
             cout << "查詢選課紀錄" << endl;
-            queryRecord();
+            //queryRecord();
             system("pause");
             break;
         case 9:
