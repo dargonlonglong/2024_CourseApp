@@ -16,7 +16,7 @@ Department Student::getDepartment() const
 	return department;
 }
 
-ClassName Student::getclassName() const
+ClassName Student::getClassName() const
 {
 	return className;
 }

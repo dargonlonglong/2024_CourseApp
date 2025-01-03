@@ -15,7 +15,7 @@ public:
 	
 	// getter
 	string getCourseId() const;
-	string getCoursename() const;
+	string getCourseName() const;
 	string getCourseDescription() const;
 	
 	// setter

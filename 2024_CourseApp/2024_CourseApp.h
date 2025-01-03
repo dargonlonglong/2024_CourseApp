@@ -21,3 +21,4 @@ void deleteRecord();
 void updateStudent();
 void updateCourse();
 void updateTeacher();
+void saveRecordsToFile(const string&);

@@ -15,7 +15,7 @@ string Course::getCourseId() const
 	return courseId;
 }
 
-string Course::getCoursename() const
+string Course::getCourseName() const
 {
 	return courseName;
 }

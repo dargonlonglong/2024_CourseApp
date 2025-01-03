@@ -15,7 +15,7 @@ public:
 	// Getter, 取值函數
 	string getStudentId() const;
 	Department getDepartment() const;
-	ClassName getclassName() const;
+	ClassName getClassName() const;
 
 	// Setters, 設值函數
 	void setStudentId(const string& studentId);
