@@ -637,7 +637,7 @@ void saveRecordsToFile(const string& filename) {
 
         //查找課程
         auto courseIt = find_if(courses.begin(), courses.end(), [&record](const Course& course) {
-            return course.getCourseDescription() == record.getCourseId();
+            return course.getCourseId() == record.getCourseId();
             });
 
         if (studentIt != students.end() && courseIt != courses.end()) {
